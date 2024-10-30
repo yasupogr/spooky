@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sooo Spookie</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
+
+    <style>
+        @-webkit-keyframes flashing-text
+        {
+            0%     { }
+            19.5%     { left:50%; top:50%; }
+            20%     { left:51%; top:51%; }
+            20.5%     { left:50%; top:50%; }
+            
+            26%     { opacity:1;}
+            27%     { opacity:0; }
+            28%     { opacity:1; }
+            
+            79.5%     { left:50%; top:50%; }
+            80%     { left:49%; top:51%; }
+            80.5%     { left:50%; top:50%; }
+            
+        }
+    </style>
+
+    <style>
+        /* Universal CSS */
+        *{   padding: 0; margin: 0; box-sizing: border-box;   }
+
+        html{
+            height: 100%;
+        }
+        body{
+            background-color: #000;
+            overflow: hidden;
+            height: 100%;
+        }
+
+        /* Main Css - G Layer */
+        .site_wrapper{
+            overflow: hidden;
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+        }
+            /* 1st layer */
+            .intro_screen{
+                display: block;
+
+                height: 100%;
+                width: 100%;
+            }
+                /* 2nd layer */
+                .intro_background{
+                    background: url('images/intro_background.jpg') no-repeat center center;
+                }
+                    /* 3rd layer */
+                .intro_div{
+                    height: 100%;
+                    width: 100%;
+                }
+                        /* 4th layer */
+                        .intro_text_div{
+                            display: flex;
+                            height: 100%;
+                            width: 100%;
+
+                            cursor: pointer;
+                        }
+                            /* 5th layer */
+                            .intro_text_div h1:hover, h2:hover{
+                                color: maroon;
+                            }
+                        /*.intro_character_div{
+                            display: flex;
+
+                            -webkit-animation: flashing-text .36s infinite forwards;
+                            -webkit-transition: 0.4s;
+                        }*/
+                        .intro_text{
+                            color: #f5f5f5;
+                            font-size: 15em;
+                            -webkit-animation: flashing-text .36s infinite forwards;
+                            -webkit-transition: 0.4s;
+                        }
+                        .intro_subtext{
+                            font-family: "Oswald", serif;
+                            text-align: center;
+                            letter-spacing: 3px;
+                            color: #f5f5f5;
+                            -webkit-animation: flashing-text .36s infinite forwards;
+
+                            margin-top: 10px;
+                    }
+    </style>
+</head>
+<body>
+    <!-- G-Layer -->
+    <div class="site_wrapper">
+        <!-- 1st Layer -->
+        <div class="intro_screen">
+            <!-- 2nd Layer -->
+            <div class="intro_background"></div>
+            <div class="intro_div">
+                <!-- 3rd Layer -->
+                <div class="intro_text_div">
+                    <!-- 4th Layer -->
+                    <h1 class="intro_text">死神</h1>
+                    <h2 class="intro_subtext">enter the depths.</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
